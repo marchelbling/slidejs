@@ -1,0 +1,35 @@
+@import "defs";
+
+.index {
+  line-height: 1.5em;
+
+  section {
+    position: relative;
+    -moz-box-sizing: border-box;
+    box-sizing:      border-box;
+
+    .meta {
+      margin-bottom: @margin;
+    }
+  }
+
+  @media (min-width: 500px) {
+    section {
+      margin-top: 44px;
+      padding-left: 110px;
+
+      h1 {
+        line-height: 1em;
+        position: absolute;
+        left: 0;
+        top: -8px;
+        margin-top: 0;
+      }
+    }
+
+    ul.archive {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

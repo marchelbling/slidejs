@@ -1,0 +1,83 @@
+.b (@anchor, @hover) {
+  &, &:visited {
+    color: @anchor;
+  }
+
+  &:hover, &:active {
+    color: @hover;
+
+    &.parenthesis, & .parenthesis {
+      color: inherit;
+    }
+  }
+}
+
+.a (@anchor, @hover) {
+  a { .b(@anchor, @hover); }
+}
+
+.theme(@back, @front, @anchor, @hover) {
+  color: @front;
+  background: @back;
+
+  .a(@anchor, @hover);
+
+  a.icon {
+    .b(@front, @hover);
+  }
+
+  h1 {
+    .a(@front, mix(@front, @hover));
+  }
+
+  .small, .parenthesis, .date {
+    color: mix(@front, @back, 50%);
+    .a(mix(@anchor, @back, 60%), mix(@hover, @back, 70%));
+  }
+
+  blockquote:before {
+    color: mix(@front, @back, 10%);
+  }
+
+  pre:before {
+    background: linear-gradient(to left, fade(@back, 0), @back);
+  }
+
+  pre:after {
+    background: linear-gradient(to right, fade(@back, 0), @back);
+  }
+
+  #top { .a(@front, @hover); }
+
+  #logo {
+    & > div {
+      background: @front;
+    }
+    &:hover > div,
+    &:active > div {
+      background: @hover;
+    }
+  }
+
+  .key {
+    color: mix(@back, @front, 30%);
+    background: mix(@back, @front, 90%);
+  }
+
+}
+
+.dark {
+  .theme(#333338, #fffff5, #9ee, #0ff);
+}
+
+.black {
+  .theme(#000, #aaa, #9aa, #0ff);
+}
+
+.light {
+  .theme(#fff, #000, #ff0219, #ff7302);
+}
+
+.red {
+  .theme(#422, #fda, #ffa, #fff);
+}

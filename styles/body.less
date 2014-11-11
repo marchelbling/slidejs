@@ -1,0 +1,89 @@
+@import "defs";
+
+html {
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: @standard_fonts;
+  margin:      0;
+  padding:     8px 0 0 0;
+  font-size:   18px;
+  font-weight: 400;
+}
+
+.date {
+  font-family: @number_fonts;
+}
+
+#content {
+  clear: both;
+}
+
+code, .tldr {
+  font-family: @code_fonts;
+}
+
+.small, .thin {
+  font-size: 0.61em;
+}
+
+.thin {
+  text-transform: uppercase;
+  line-height: 0.61em;
+}
+
+.dont-break {
+  white-space: nowrap;
+}
+
+.clear { clear: both; }
+
+.smaller {
+  font-size: 0.78em;
+}
+
+.math {
+  text-align: center;
+  font-style: italic;
+  white-space: pre-line;
+}
+
+.sidenote {
+  font-size: 0.78em;
+  line-height: 1.49em;
+
+  @media (max-width: 850px) {
+    text-align: right;
+  }
+
+  @media (min-width: 850px) {
+    margin: 0.5em 0 0 0;
+    p { margin: 0 0 0.5em 0; }
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    text-align: right;
+  }
+}
+
+@media screen {
+  .in_print { display: none; }
+}
+
+@media print {
+  * {
+    color: black !important;
+    background-color: white !important;
+  }
+
+  #top, #photos {
+    display: none;
+  }
+
+  body {
+    font-size: 11px;
+  }
+}

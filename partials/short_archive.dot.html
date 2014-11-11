@@ -1,0 +1,7 @@
+{{~ it.files.slice(0,5) :file}}
+<li>
+  {{ file.d = new Date(file.date); }}
+  <a href="{{= file.href }}">{{! file.title }}</a>
+  {{= it.include("list_date", { date: file.d }) }}
+</li>
+{{~}}

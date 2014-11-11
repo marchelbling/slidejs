@@ -1,0 +1,27 @@
+table {
+  border-spacing: 0;
+
+  &.full {
+    width: 100%;
+  }
+
+  .head {
+    font-weight: 700;
+  }
+
+  .sparse {
+    td { padding-top: 1em; }
+
+    :first-child tr:first-child td {
+      padding-top: 0;
+    }
+  }
+}
+
+td {
+  vertical-align: top;
+  padding-right:  0;
+  padding-left:   16px;
+
+  &:first-child { padding-left: 0; }
+}
