@@ -1,11 +1,11 @@
-ns("szywon.extra_modules", function () {
+ns("slidejs.extra_modules", function () {
   "use strict";
 
   this.start = start;
 
   var ATTR_EXTRA_SCRIPTS = "data-load-modules";
   var EXTRA_SCRIPTS_SELECTOR = "[" + ATTR_EXTRA_SCRIPTS + "]";
-  var array = use("szywon.utils.array");
+  var array = use("slidejs.utils.array");
 
   function start () {
     var nodes;

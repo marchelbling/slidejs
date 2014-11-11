@@ -1,4 +1,4 @@
-ns('szywon.utils', function () {
+ns('slidejs.utils', function () {
   'use strict';
 
   this.array = array;

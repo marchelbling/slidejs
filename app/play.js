@@ -1,4 +1,6 @@
-ns("szywon.szow", function () {
+// written by Szymon Witamborski
+
+ns("slidejs.play", function () {
   "use strict";
 
   this.fns(start);
@@ -6,7 +8,7 @@ ns("szywon.szow", function () {
   var NEXT_CODES = [32, 34, 39, 40];
   var PREV_CODES = [33, 37, 38];
 
-  var array = use("szywon.utils.array");
+  var array = use("slidejs.utils.array");
 
   var html = document.documentElement;
   var fullscreen = html.mozRequestFullScreen || html.webkitRequestFullScreen;

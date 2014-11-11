@@ -1,4 +1,4 @@
-ns('szywon.scripts', function () {
+ns('slidejs.scripts', function () {
   'use strict';
 
   this.add = add;
