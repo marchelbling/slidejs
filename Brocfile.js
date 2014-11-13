@@ -41,11 +41,7 @@ var pages = beauty([zetzer({
 var atoms = atom({ indexes: indexes, pages: pages });
 
 var images = merge(["pages"], {
-  extensions: ["png", "jpg", "svg"]
-});
-
-var cname = merge(["resources"], {
-  filter: /^CNAME$/
+  extensions: ["gif", "png", "jpg", "svg"]
 });
 
 var css = concat(less("styles", {
@@ -61,5 +57,11 @@ var js = concat("app", {
   outputFile: "/all.js"
 });
 
-module.exports = merge([css, js, pages, atoms,
+var highlight = concat("js", {
+  inputFiles: ["highlight.js"],
+  outputFile: "/highlight.js"
+});
+
+
+module.exports = merge([css, js, highlight, pages, atoms,
                         images]);
