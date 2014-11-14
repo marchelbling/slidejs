@@ -57,11 +57,16 @@ var js = concat("app", {
   outputFile: "/all.js"
 });
 
-var highlight = concat("js", {
-  inputFiles: ["highlight.js"],
-  outputFile: "/highlight.js"
+var vendorscss = concat("vendors", {
+  inputFiles: ["*.css"],
+  outputFile: "/vendors.css"
+});
+
+var vendorsjs = concat("vendors", {
+  inputFiles: ["*.js"],
+  outputFile: "/vendors.js"
 });
 
 
-module.exports = merge([css, js, highlight, pages, atoms,
+module.exports = merge([css, js, vendorscss, vendorsjs, pages, atoms,
                         images]);
