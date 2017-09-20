@@ -26,6 +26,6 @@
     "moment": "^2.8.3"
   },
   "devDependencies": {
-    "broccoli": "^0.13.2"
+    "broccoli": "^0.13.6"
   }
 }
